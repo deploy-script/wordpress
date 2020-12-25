@@ -68,7 +68,7 @@ install_wordpress() {
     # create wp config
     cp wp-config-sample.php wp-config.php
 
-    # set database details with perl find and replace
+    # set database details (find and replace)
     sed -i "s/database_name_here/$dbname/g" wp-config.php
     sed -i "s/username_here/$dbuser/g" wp-config.php
     sed -i "s/password_here/$dbpass/g" wp-config.php
@@ -80,7 +80,7 @@ install_wordpress() {
         push @chars, split //, "!@#$%^&*()-_ []{}<>~\`+=,.;:/?|";
         sub salt { join "", map $chars[ rand @chars ], 1 .. 64 }
     }
-    s/put your unique phrase here//ge
+    s/put your unique phrase here/salt()/ge
     ' wp-config.php
 
     # create uploads folder and set permissions
