@@ -3,7 +3,7 @@
 This script deploys latest Wordpress on Ubuntu.
 
 **Note:** Should be used after deploying [LAMP](https://github.com/deploy-script/lamp)
-It requires `/root/passwords.txt` file, if you want to install manually, follow the `install_wordpress()` lines in the `script.sh`.
+It requires `/root/passwords.txt` file, if you want to install manually, follow the `install_wordpress()` lines in the [`script.sh`](https://github.com/deploy-script/wordpress/blob/master/script.sh#L42).
 
 ## :clipboard: Features
 
